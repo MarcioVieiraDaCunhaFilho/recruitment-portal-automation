@@ -7,6 +7,24 @@ Scenario: Simple Login with success
     And clicks Login
     Then validates that you are on Dashboard page
 
+
+Scenario: Simple Login attempt with username error
+    When fills out incorrect username and password credentials
+    And clicks Login
+    Then validates Invalid credentials message
+
+Scenario: Simple Login attempt with password error
+    When fills out username and incorrect password credentials
+    And clicks Login
+    Then validates Invalid credentials message
+
+
+Scenario: Simple Login attempt with blank information
+    When doesn't fill out username and password credentials
+    And clicks Login
+    Then validates Required field message
+
+
 Scenario: Create Candidate with success
     When logged with success
     And clicks on Recruitment tab on left navigation menu

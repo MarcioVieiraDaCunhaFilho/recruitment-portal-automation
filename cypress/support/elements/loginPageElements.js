@@ -15,5 +15,15 @@ class loginPageElements{
     headerHRM = () =>{
         return '[class="orangehrm-login-branding"]'
     }
+
+    alertInvalidCredentials = () =>{
+        return 'Invalid credentials'
+    }
+
+    alertRequiredField = () =>{
+        return 'Required'
+    }
+
+    
 }
 export default loginPageElements;

@@ -14,11 +14,34 @@ Then ("fills out username and password credentials", () => {
     cy.fillPassword();
 })
 
+Then ("fills out incorrect username and password credentials", () => {
+    cy.fillIncorrectUsername();
+    cy.fillPassword();
+})
+
+Then ("fills out username and incorrect password credentials", () => {
+    cy.fillUsername();
+    cy.fillIncorrectPassword();
+})
+
+Then ("doesn't fill out username and password credentials", () => {
+    cy.passwordFieldIsVisible();
+    cy.usernameFieldIsVisible();
+})
+
 Then ("clicks Login", () => {
     cy.clickLoginButtom()
 })
 
 Then("validates that you are on Dashboard page", () =>{
     cy.verifyLoadHomePage()
+})
+
+Then("validates Invalid credentials message", () =>{
+    cy.verifyInvalidCredentialsAlert()
+})
+
+Then("validates Required field message", () =>{
+    cy.verifyAlertRequiredField()
 })
 

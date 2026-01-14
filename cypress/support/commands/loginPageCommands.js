@@ -11,16 +11,43 @@ Cypress.Commands.add('verifyLoadLoginPage', () =>{
     should('exist')
 });
 
+Cypress.Commands.add('verifyInvalidCredentialsAlert', () =>{
+    cy.get(LoginPageElements.alertInvalidCredentials).
+    should('exist')
+});
+
 Cypress.Commands.add('fillUsername', ()=>{
     cy.get(LoginPageElements.fieldUsername()).
     should('be.visible')
     .type(Cypress.env("usernameInfo"))
 });
 
+Cypress.Commands.add('fillIncorrectUsername', ()=>{
+    cy.get(LoginPageElements.fieldUsername()).
+    should('be.visible')
+    .type(Cypress.env("usernameError"))
+});
+
 Cypress.Commands.add('fillPassword', ()=>{
     cy.get(LoginPageElements.fieldPassword()).
     should('be.visible')
     .type(Cypress.env("passwordInfo"))
+});
+
+Cypress.Commands.add('passwordFieldIsVisible', ()=>{
+    cy.get(LoginPageElements.fieldPassword()).
+    should('be.visible')
+});
+
+Cypress.Commands.add('usernameFieldIsVisible', ()=>{
+    cy.get(LoginPageElements.fieldUsername()).
+    should('be.visible')
+});
+
+Cypress.Commands.add('fillIncorrectPassword', ()=>{
+    cy.get(LoginPageElements.fieldPassword()).
+    should('be.visible')
+    .type(Cypress.env("passwordError"))
 });
 
 Cypress.Commands.add('clickLoginButtom', () =>{
@@ -34,4 +61,9 @@ Cypress.Commands.add('clickForgotPasswordButtom', () =>{
     cy.get(LoginPageElements.buttomForgotPassword).
     should('be.visible').
     click ()
+});
+
+Cypress.Commands.add('verifyAlertRequiredField', () =>{
+    cy.get(LoginPageElements.alertRequiredField).
+    should('exist')
 });
