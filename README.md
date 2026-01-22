@@ -6,15 +6,15 @@ I used Cypress because of its versatibility and because its simple to explain st
 
 ## Strategy
 
-I organized the automation separating the assets in "features" ; "commands" and "elements" in a page by page basis and the "steps" folder to contain the actual process tested.
+I organized the automation separating the assets in "features" ; "commands" and "elements" in a page by page basis and the "steps" folder to contain the actual process tested. The .feature file is responsable to house the actual scenarios and steps in a Gherkin style.
 
-Organizing the assets in this way the maintenance, you have an easier time building up the automation once new scenarios appear and you also have less redundant code because you can reuse the code more efficiently.
+Organizing the assets in this way to make the maintenance easier, so you have a better time building up the automation once new scenarios appear and you also have less redundant code because you can reuse the code more efficiently.
 
-About the "steps" folder, I decided to use only one archive initially because of its reduced size but in the future I would possibly organize it either in a page by page like the other assets or in a metrics criteria depending on the objective.
+About the "steps" folder, I decided to use only one archive initially because of the low quantity of scenarios but in the future I would possibly organize it either in a page by page like the other assets or in a metrics criteria depending on the objective.
 
 
 ## Pre-requisites
-TO run the test scenarios in Gherkin using Cypress, follow the steps:
+To run the test scenarios in Gherkin using Cypress, follow the steps:
 
 Make sure you have Node.js installed. Execute:
 

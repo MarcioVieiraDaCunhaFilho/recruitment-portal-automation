@@ -1,4 +1,4 @@
-Feature: Recruiter
+Feature: Login
     Background: acess Orange HRM
     Given the user acesses Orange HRM loginpage
 
@@ -24,20 +24,3 @@ Scenario: Simple Login attempt with blank information
     And clicks Login
     Then validates Required field message
 
-
-Scenario: Create Candidate with success
-    When logged with success
-    And clicks on Recruitment tab on left navigation menu
-    Then clicks on Add button to add a new candidate
-    Then fills out all required fields
-    And clicks save
-    Then validates that the user was successfully created
-
-    Scenario: Edit candidate info with success
-    When logged with success
-    And clicks on Recruitment tab on left navigation menu
-    Then types candidate name
-    Then open candidate profile
-    And clicks on edit information
-    Then changes information
-    Then clicks save to validate changes

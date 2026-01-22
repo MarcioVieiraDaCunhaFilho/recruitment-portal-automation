@@ -17,3 +17,6 @@
 import './commands'
 import './commands/loginPageCommands'
 import './commands/recruitmentPageCommands'
+import './commands/addCandidatePageCommands'
+import './commands/sidemenuCommands'
+import './commands/viewCandidatesPageCommands'

@@ -11,7 +11,7 @@ class addCandidatePageElements{
     fieldEmail = () =>{
         return '[class="oxd-input oxd-input--active orangehrm-lastname"]'         
     } 
-    buttomSearch = () =>{
+    buttomSave = () =>{
         return 'button[class="oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space"]'
     }
     

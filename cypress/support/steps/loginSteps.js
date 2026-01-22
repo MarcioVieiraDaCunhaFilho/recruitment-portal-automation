@@ -3,6 +3,8 @@ import loginPageElements from "../elements/loginPageElements"
 const LoginPageElements = new loginPageElements
 import recruitmentPageElements from "../elements/recruitmentPageElements"
 const RecruitmentPageElements = new recruitmentPageElements
+import addCandidatePageElements from "../elements/addCandidatePageElements"
+const AddCandidatePageElements = new addCandidatePageElements
 
 Given ("the user acesses Orange HRM loginpage", () => {
     cy.acessLoginPage();
@@ -45,3 +47,9 @@ Then("validates Required field message", () =>{
     cy.verifyAlertRequiredField()
 })
 
+Given ("logged with success", () => {
+    cy.fillUsername();
+    cy.fillPassword();
+    cy.clickLoginButtom()
+    cy.verifyLoadHomePage()
+})
